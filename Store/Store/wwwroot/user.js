@@ -23,7 +23,7 @@ const getDataFromLogin = () => {
 }
 const login = async () => {
     const user = getDataFromLogin()
-    
+    //add a validation for email field
     try {
         const data = await fetch(`api/Users/login/?username=${user.username}&password=${user.password}`, {
             method: 'POST',
